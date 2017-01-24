@@ -3,6 +3,7 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
+import * as fs from 'fs';
 import * as sass from 'node-sass';
 import DtsCreator, { IDtsCreatorOpts, IDtsPreprocessed } from 'styles-to-dts';
 
@@ -12,6 +13,7 @@ export interface ISassDtsCreatorOpts extends IDtsCreatorOpts {
 	indentType?: string;
 	indentWidth?: number;
 	linefeed?: string;
+	loader?: boolean;
 }
 
 class SassDtsCreator extends DtsCreator {
@@ -28,22 +30,42 @@ class SassDtsCreator extends DtsCreator {
 			indentType,
 			indentWidth,
 			linefeed,
+			loader,
 		} = this.options;
 		return new Promise<IDtsPreprocessed>((resolve, reject) => {
-			sass.render({
-				file,
-				includePaths,
-				indentedSyntax,
-				indentType,
-				indentWidth,
-				linefeed,
-			}, (err, result) => {
-				if (err) {
-					reject(err);
+			const render = (data?: string) => {
+				const sassOpts: sass.Options = {
+					includePaths,
+					indentedSyntax,
+					indentType,
+					indentWidth,
+					linefeed,
+				};
+				if (data) {
+					sassOpts.data = data;
 				} else {
-					resolve({ filePath: file, content: result.css.toString() });
+					sassOpts.file = file;
 				}
-			});
+				sass.render(sassOpts, (err, result) => {
+					if (err) {
+						reject(err);
+					} else {
+						resolve({ filePath: file, content: result.css.toString() });
+					}
+				});
+			};
+
+			if (loader) {
+				fs.readFile(file, 'utf8', (err, data) => {
+					if (err) {
+						reject(err);
+					} else {
+						render(data.replace(/("|')~\b/, '$1'));
+					}
+				});
+			} else {
+				render();
+			}
 		});
 	}
 }

@@ -18,6 +18,7 @@ const yarg = yargs.usage('Generate .scss.d.ts from scss files')
 	.alias('i', 'includePaths').describe('i', 'Add sass include paths').array('i')
 	.alias('c', 'camelCase').describe('c', 'Convert SASS class tokens to camelcase').boolean('c')
 	.alias('o', 'outDir').describe('o', 'Output directory')
+	.alias('l', 'loader').describe('l', 'Specify the files are to be consumed by css-loader').boolean('l')
 	.alias('h', 'help').help('h')
 	.version(() => require('../package.json').version);
 
@@ -55,7 +56,7 @@ const main = () => {
 	let filesPattern = path.join(searchDir, '**/*.scss');
 	rootDir = process.cwd();
 	creator = new SassDtsCreator({
-		camelCase: argv.c, rootDir, searchDir, outDir: argv.o,
+		camelCase: argv.c, rootDir, searchDir, loader: argv.l, outDir: argv.o,
 	});
 
 	glob(filesPattern, (err, files) => {
