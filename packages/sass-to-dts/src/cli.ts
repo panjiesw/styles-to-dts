@@ -44,8 +44,6 @@ const main = () => {
 		return;
 	}
 
-	console.log('argv', argv);
-
 	if (argv._ && argv._[0]) {
 		searchDir = argv._[0];
 	} else if (argv.p) {
