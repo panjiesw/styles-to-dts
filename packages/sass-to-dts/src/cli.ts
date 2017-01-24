@@ -56,7 +56,7 @@ const main = () => {
 	let filesPattern = path.join(searchDir, '**/*.scss');
 	rootDir = process.cwd();
 	creator = new SassDtsCreator({
-		camelCase: argv.c, rootDir, searchDir, loader: argv.l, outDir: argv.o,
+		camelCase: argv.c, rootDir, searchDir, includePaths: argv.i, loader: argv.l, outDir: argv.o,
 	});
 
 	glob(filesPattern, (err, files) => {
