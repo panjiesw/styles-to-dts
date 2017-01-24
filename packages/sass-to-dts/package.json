@@ -13,7 +13,7 @@
     "lib"
   ],
   "bin": {
-    "sassdts": "./lib/cli.js"
+    "sass-dts": "./lib/cli.js"
   },
   "keywords": [
     "css-modules",
