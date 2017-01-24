@@ -1,7 +1,4 @@
-// Copyright (c) 2017 Panjie Setiawan Wicaksono
-//
-// This software is released under the MIT License.
-// https://opensource.org/licenses/MIT
+#!/usr/bin/env node
 
 // Heavily based on typed-css-modules by Yosuke Kurami licensed under MIT
 // https://github.com/Quramy/typed-css-modules/blob/master/src/cli.js
