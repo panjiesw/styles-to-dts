@@ -1,0 +1,29 @@
+{
+  "name": "styles-to-dts",
+  "version": "0.1.0-dev.0",
+  "description": "Common package to generate dts from styles",
+  "main": "lib/index",
+  "types": "lib/index.d.ts",
+  "repository": "git+https://github.com/panjiesw/styles-to-dts.git",
+  "author": "Panjie Setiawan Wicaksono <panjie@panjiesw.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc --rootDir src",
+    "clean": "del lib"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.61",
+    "del-cli": "^0.2.1",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5"
+  },
+  "dependencies": {
+    "typed-css-modules": "^0.1.13"
+  }
+}

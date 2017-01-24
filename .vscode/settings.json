@@ -1,0 +1,34 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	"css.validate": false,
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": true,
+	"editor.renderWhitespace": "boundary",
+	"editor.rulers": [
+		120
+	],
+	"editor.wrappingColumn": 120,
+	"editor.snippetSuggestions": "top",
+	"eslint.enable": false,
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.exclude": {
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/.idea": true,
+		"**/.iml": true
+	},
+	"licenser.author": "Panjie Setiawan Wicaksono",
+	"licenser.projectName": "styles-to-dts",
+	"licenser.license": "MIT",
+	"stylelint.enable": false,
+	"tslint.enable": false,
+	"tslint.ignoreDefinitionFiles": true,
+	"tslint.exclude": [
+		"./lib",
+		"./es6"
+	],
+	"xo.enable": false,
+	"vsicons.presets.angular": false
+}

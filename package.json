@@ -1,0 +1,11 @@
+{
+  "name": "styles-to-dts",
+  "version": "0.1.0-dev.0",
+  "description": "Generate dts from styles",
+  "main": "lib/index",
+  "repository": "git+https://github.com/panjiesw/sass-to-dts.git",
+  "author": "Panjie Setiawan Wicaksono <panjie@panjiesw.com>",
+  "license": "MIT",
+  "devDependencies": {
+  }
+}
