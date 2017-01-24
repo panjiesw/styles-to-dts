@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "es6",
-    "module": "commonjs",
+		"module": "commonjs",
 		"moduleResolution": "node",
 		"declaration": true,
 		"allowSyntheticDefaultImports": true,
@@ -9,7 +9,8 @@
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
 		"noUnusedParameters": true,
-    "noUnusedLocals": true,
+		"noUnusedLocals": true,
+		"removeComments": true,
 		"strictNullChecks": true,
 		"outDir": "lib",
 		"baseUrl": "."

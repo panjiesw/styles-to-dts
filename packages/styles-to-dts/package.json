@@ -1,6 +1,6 @@
 {
   "name": "styles-to-dts",
-  "version": "0.1.0-dev.0",
+  "version": "0.2.0-dev.0",
   "description": "Common package to generate dts from styles",
   "main": "lib/index",
   "types": "lib/index.d.ts",
