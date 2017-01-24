@@ -1,6 +1,6 @@
 {
   "name": "sass-to-dts",
-  "version": "0.1.0-dev.0",
+  "version": "0.1.0",
   "description": "Generate dts files from sass files",
   "main": "lib/index",
   "repository": "git+https://github.com/panjiesw/styles-to-dts.git",
@@ -11,6 +11,15 @@
   },
   "files": [
     "lib"
+  ],
+  "bin": {
+    "sassdts": "./lib/cli.js"
+  },
+  "keywords": [
+    "css-modules",
+    "typescript",
+    "sass",
+    "scss"
   ],
   "scripts": {
     "build": "tsc --rootDir src",
