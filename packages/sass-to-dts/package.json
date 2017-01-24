@@ -1,6 +1,6 @@
 {
   "name": "sass-to-dts",
-  "version": "0.1.0-dev.0",
+  "version": "0.1.1",
   "description": "Generate dts files from sass files",
   "main": "lib/index",
   "repository": "git+https://github.com/panjiesw/styles-to-dts.git",
@@ -35,6 +35,7 @@
     "chalk": "^1.1.3",
     "glob": "^7.1.1",
     "mkdirp": "^0.5.1",
+    "styles-to-dts": "^0.1.0",
     "yargs": "^6.6.0"
   }
 }
